@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CCT46_ver1</string>
+    <string name="check_in">Check In</string>
+    <string name="check_out">Check Out</string>
+    <string name="time_clock">Time Clock</string>
+    <string name="date_of_check_in_out">DATE OF CHECK IN/OUT</string>
+    <string name="hours_for_the_week">Hours for the Week</string>
+    <string name="hours_worked">HOURS WORKED</string>
+    <string name="home">Home</string>
+    <string name="clock">Clock</string>
+    <string name="reset">Reset</string>
+    <string name="tools">Tools</string>
+    <string name="submit">Submit</string>
+    <string name="enter_hours">Enter Hours</string>
+    <string name="log_entries">LOG ENTRIES</string>
+</resources>

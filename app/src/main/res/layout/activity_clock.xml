@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainMenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="#B6A8A8"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="792dp">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_ToDoList"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:contentDescription="@android:string/yes"
+                    android:focusable="true"
+                    android:tint="#000000"
+                    android:tintMode="multiply"
+                    app:backgroundTint="#EEECEC"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.869"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/shiftView"
+                    app:layout_constraintVertical_bias="0.652"
+                    app:srcCompat="@drawable/calendar" />
+
+                <Button
+                    android:id="@+id/resetButton"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#775C5C"
+                    android:text="@string/reset"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.954" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_Home"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:contentDescription="@android:string/yes"
+                    android:focusable="true"
+                    android:tintMode="multiply"
+                    app:backgroundTint="#EEECEC"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.158"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/shiftView"
+                    app:layout_constraintVertical_bias="0.652"
+                    app:srcCompat="@drawable/home2" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hoursView"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="-280dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="-50dp"
+                    android:padding="0dp"
+                    app:cardBackgroundColor="#EFEDED"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/timeClockView">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="0dp">
+
+                        <TextView
+                            android:id="@+id/hoursTitleText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-100dp"
+                            android:layout_marginEnd="80dp"
+                            android:fontFamily="@font/be_vietnam_semibold"
+                            android:padding="0dp"
+                            android:text="@string/hours_for_the_week"
+                            android:textColor="@color/material_dynamic_neutral40"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/accumulatedHoursText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-25dp"
+                            android:fontFamily="@font/bebas_neue"
+                            android:text="@string/hours_worked"
+                            android:textSize="34sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/hoursTitleText" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/timeClockView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="-400dp"
+                    android:layout_marginEnd="30dp"
+                    app:cardBackgroundColor="#EFEDED"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:id="@+id/checkInTimeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bebas_neue"
+                            android:gravity="center"
+                            android:text="@string/date_of_check_in_out"
+                            android:textColor="#49454F"
+                            android:textSize="34sp"
+                            app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="-180dp"
+                            android:layout_marginBottom="220dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/timeClockTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/be_vietnam_semibold"
+                                android:text="@string/time_clock"
+                                android:textColor="@color/material_dynamic_neutral40"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:layout_marginBottom="-70dp"
+                            android:baselineAligned="true"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+                            <LinearLayout
+                                android:layout_width="49dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="0dp"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp">
+
+                                <Button
+                                    android:id="@+id/checkInButton"
+                                    android:layout_width="140dp"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#775C5C"
+                                    android:text="@string/check_in" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="15dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="0dp"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp">
+
+                                <Button
+                                    android:id="@+id/checkOutButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#775C5C"
+                                    android:text="@string/check_out" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/shiftView"
+                    android:layout_width="0dp"
+                    android:layout_height="128dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginEnd="30dp"
+                    app:cardBackgroundColor="#EFEDED"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hoursView"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/submitHoursButton"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#775C5C"
+                            android:text="@string/submit"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.921"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.625" />
+
+                        <TextView
+                            android:id="@+id/hoursTitleText4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-100dp"
+                            android:layout_marginEnd="80dp"
+                            android:fontFamily="@font/be_vietnam_semibold"
+                            android:padding="0dp"
+                            android:text="@string/tools"
+                            android:textColor="@color/material_dynamic_neutral40"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.167"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.601" />
+
+                        <EditText
+                            android:id="@+id/hoursWorkedEditText"
+                            android:layout_width="180dp"
+                            android:layout_height="48dp"
+                            android:autofillHints=""
+                            android:ems="10"
+                            android:inputType="text"
+                            android:text="@string/enter_hours"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/submitHoursButton"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/hoursTitleText4"
+                            app:layout_constraintVertical_bias="0.062"
+                            tools:ignore="LabelFor" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

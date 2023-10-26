@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/arizonia</item>
+        <item>@font/be_vietnam_extrabold</item>
+        <item>@font/be_vietnam_semibold</item>
+        <item>@font/be_vietnam_thin</item>
+        <item>@font/bebas_neue</item>
+    </array>
+</resources>
